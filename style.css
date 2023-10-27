@@ -1,0 +1,792 @@
+body {
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none;
+}
+
+#desktop {
+  width: 100vw;
+  height: 100vh;
+}
+
+#therightdocument {
+  width: 450px;
+  height: 600px; 
+}
+
+#therightdocument img {
+  background-color: white;
+  cursor: pointer;
+}
+
+#therightdocument p {
+  margin-top: 200px;
+}
+
+#therightdocument a, #aboutdokument a {
+  color: #F95738;
+  text-decoration: none;
+}
+
+#therightdocument a:hover, #aboutdokument a:hover {
+  text-decoration: underline;
+} 
+
+#therightdocument.rightDocumentShow {
+  display: block;
+  z-index: 200;
+}
+
+.rightDocumentNotShow {
+  display: none;
+}
+
+.dokumentwindow {
+  background-color: white;
+  filter: drop-shadow(0.5px 5px 10px rgba(0, 0, 0, 0.5));
+  text-align: center;
+  width: 450px;
+  height: 600px;
+  z-index: 150;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.dokumentwindow p {
+  font-family: input-sans, sans-serif; 
+  font-size: 20px;
+  width: 300px;
+  margin: auto;
+  margin-top: 250px;
+}
+
+.dokumentwindow img {
+  float:right;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#aboutdokument {
+  width: 700px;
+  height: 400px;
+  text-align: left;
+}
+
+#aboutdokument p {
+  width: 550px;
+  margin-top: 90px;
+}
+
+
+.draggable {
+  position: absolute; 
+  display: inline-block;
+}
+
+.draggable2 {
+  display:none;
+  z-index: 0;
+}
+
+
+#window1 {
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+#window1-2 {
+  top: 70%;
+  left: 25%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+#window2 {
+  top: 40%;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#window2-2 {
+  top: 70%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+#window2-3 {
+  top: 60%;
+  left: 20%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+
+#window3 {
+  top: 60%;
+  left: 60%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#window3-1 {
+  top: 30%;
+  left: 30%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#window4 {
+  top: 45%;
+  left: 55%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+#window4-1 {
+  top: 35%;
+  left: 30%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+} 
+
+
+#window5 {
+  top: 40%;
+  left: 60%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+#window5-1 {
+  top: 60%;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+#window6 {
+  top: 30%;
+  left: 40%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+#window8 {
+  top: 55%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+#window9 {
+  top: 35%;
+  left: 55%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#window10 {
+  top: 65%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+#window11 {
+  top: 60%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+#window12 {
+  top: 60%;
+  left: 65%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100; 
+}
+
+.window .mapp, .window .dokument {
+  z-index: -10;
+}
+
+.window {
+  height: 400px;
+  width: 600px; 
+  background-color: white;
+  border-radius: 10px;
+  filter: drop-shadow(0.5px 5px 10px rgba(0, 0, 0, 0.5));
+  position: absolute;
+  overflow: hidden;
+  border-style: solid; 
+  border-color: #F95738;
+  border-width: 2px;
+}
+
+.windowheader {
+  background-color: #F95738;
+  height: 30px;
+}
+
+.window-cross {
+  float: right;
+  width: 25px;
+  margin-top: 8px;
+  margin-right: 15px;
+  display:none;
+}
+
+
+#window1header { 
+  height:;
+  background-color: ;
+  cursor: ;
+}
+
+.mapp { 
+  width: 60px;
+  height: 50px; 
+}
+
+.desktopplacerare { 
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+#desktopmapp1placering {
+  width: 60px;
+  position: absolute; 
+}
+
+#desktopmapp2placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopmapp3placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopmapp4placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopmapp5placering {
+  width: 60px;
+  position: absolute; 
+}
+
+#desktopmapp6placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopmapp7placering {
+  width: 60px;
+  position: absolute;  
+}
+
+#desktopmapp8placering {
+  width: 60px;
+  position: absolute; 
+}
+
+#desktopmapp9placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopmapp10placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopmapp11placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopmapp12placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopmapp13placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopdokument1placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopdokument2placering {
+  width: 60px;
+  position: absolute;
+}
+
+#desktopdokument3placering {
+  width: 60px;
+  position: absolute;
+}
+
+.mappheader {
+  width: 100%;
+}
+
+.mappheader img {
+  width: 75px;
+}
+
+.mappheader img {
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.2));
+  width:75px;
+}
+
+.mapp-namn, .dokument-namn {
+  font-family: input-sans, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  font-style: normal;
+  color: #231F20;
+  width: 80px;
+  text-align: center;
+  cursor: default;
+}
+
+.mapp-namn {
+  margin-left: -3px;
+}
+.dokument-namn {
+  margin: auto;
+}
+
+.dokumentheader img {
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+}
+
+
+
+#desktopdokument1header p {
+  margin-left: 5px;
+}
+
+.dokumentheader img {
+  width: 90px;
+}
+
+
+#window1mapp1placering {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+
+#window1dokument1placering {
+  margin-left: 422px;
+  margin-top: 121px;
+}
+
+#window1-2dokument1placering {
+  margin-left: 90px;
+  margin-top: 161px;
+}
+
+
+#window2mapp1placering {
+  margin-left: 390px;
+  margin-top: 134px; 
+}
+
+#window2-2dokument1placering {
+  margin-left: 240px;
+  margin-top: 60px;
+}
+
+#window8dokument1placering {
+  margin-left: 139px;
+  margin-top: 205px;
+}
+
+#window2-3dokument1placering {
+  margin-top: 162px;
+  margin-left: 93px;
+}
+
+#window11dokument1placering {
+  margin-top: 215px;
+  margin-left: 373px;
+}
+
+#window3-1dokument1placering {
+  margin-top: 133px;
+  margin-left: 78px;
+}
+
+#window10dokument1placering {
+  margin-top: 43px;
+  margin-left: 22px;
+}
+
+#window5dokument1placering {
+  margin-top: 110px;
+  margin-left: 218px;
+}
+
+#window5-1dokument1placering {
+  margin-top: 55px;
+  margin-left: 420px;
+}
+
+#window12dokument1placering {
+  margin-top: 196px;
+  margin-left: 417px;
+}
+
+#window6dokument1placering {
+  margin-top: 49px;
+  margin-left: 45px;
+}
+
+#window6dokument2placering {
+  margin-top: 166px;
+  margin-left: 200px;
+}
+
+#window4dokument1placering {
+  margin-top: -200px;
+  margin-left: 98px;
+}
+
+#window4-1dokument1placering {
+  margin-top: 51px;
+  margin-left: 449px;
+}
+
+#window2mapp2placering {
+  margin-left: 190px;
+  margin-top: 234px; 
+}
+
+#window3mapp1placering {
+  margin-left: 350px;
+  margin-top: 70px;
+}
+
+#window4mapp1placering {
+  margin-left: 260px;
+  margin-top: 233px;
+}
+
+#window5mapp1placering {
+  margin-left: 130px;
+  margin-top: 70px;  
+}
+
+/* FRONT */ 
+
+#window1.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window1-2.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window2.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window2-2.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window2-3.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window3.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window3-1.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window4.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window4-1.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window5.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window5-1.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window6.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window8.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window9.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window10.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window11.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+#window12.draggable.front {
+  position: absolute;
+  z-index: 100 !important;
+}
+
+
+/* EJ FRONT */ 
+
+#window1.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window1-2.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important; 
+}
+
+#window2.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window2-2.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important; 
+}
+
+#window2-3.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important; 
+}
+
+#window3.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window3-1.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window4.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window4-1.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window5.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window5-1.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window6.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window8.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window9.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window10.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window11.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+#window12.draggable.ejFront {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+
+#webring {
+    display: inline-block;
+    width: 50px;
+    position: absolute;
+    top: 97%;
+    left: 97%;
+    -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+#webring img {
+  width: 50px;
+}
+
+
+
+#baramobil { 
+ display: none;
+}
+
+#baramobil p {
+  display: none;
+}
+
+
+/* MOBILE / TABLET */
+
+
+@media (hover: none) {
+  
+  #desktop {
+    display:none;
+  }
+  
+  #baramobil, #baramobil p {
+    display: block;
+    background-color: whitesmoke;
+    width: 100vw;
+    height: 100vh;
+    color: #F95738;
+    font-family: input-sans, sans-serif; 
+    font-size: 20px;
+  }
+
+  #baramobil p {
+    text-align: center;
+    margin: auto;
+    position: absolute; 
+    top: 40%;
+  }
+  
+}
+
+
+/* MINDRE DESKTOP */ 
+
+
+@media screen and (max-width: 750px) {
+  
+  
+  .dokumentwindow {
+    width: 400px;
+  }
+  
+  #aboutdokument {
+    width: 400px;
+    height: 300px;
+  }
+  
+  #therightdocument {
+  width: 400px;
+  }
+  
+  #therightdocument p {
+    margin-top: 220px;
+  }
+  
+  .dokumentwindow p {
+    font-size: 15px;
+  }
+  
+  #aboutdokument p {
+    width: 300px;
+    margin-top: 50px;
+}
+  
+  .window {
+    height: 360px;
+    width: 500px;
+  }
+  
+}
